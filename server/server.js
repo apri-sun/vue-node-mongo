@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(morgan('combined'))
 // 路由
-require('./router')(app)
+var router = require('./router')(app)
 
 app.listen(3000, () => {
     console.log('Service has already run')
